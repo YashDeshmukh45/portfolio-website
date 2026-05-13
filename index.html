@@ -1,98 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-export default function PortfolioWebsite() {
-  const projects = [
-    {
-      title: "Linux Monitoring Dashboard",
-      desc: "Real-time style monitoring dashboard inspired by DevOps observability tools.",
-    },
-    {
-      title: "Server Health Tracker",
-      desc: "Practice project focused on uptime tracking, troubleshooting, and IT operations workflows.",
-    },
-    {
-      title: "Cloud & Networking Lab",
-      desc: "Hands-on learning environment for networking, Linux administration, and cloud basics.",
-    },
-  ];
+<title>Yash Deshmukh Portfolio</title>
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-cyan-950 text-white p-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center py-20">
-          <div className="inline-block px-4 py-2 rounded-full bg-cyan-400/20 border border-cyan-400 text-cyan-300 mb-6 text-sm font-semibold">
-            Open To Work • DevOps • IT Operations
-          </div>
+<style>
 
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">
-            Yash Deshmukh
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            I build practical infrastructure-focused projects while learning Linux,
-            networking, cloud systems, monitoring, and DevOps workflows.
-            Passionate about solving real-world technical problems and growing in fast-paced startup environments.
-          </p>
-
-          <div className="mt-10 flex justify-center gap-4 flex-wrap">
-            <button className="bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
-              Explore Projects
-            </button>
-
-            <button className="border border-slate-500 px-6 py-3 rounded-2xl hover:bg-slate-800 transition">
-              Hire Me
-            </button>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mt-10">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 shadow-2xl border border-cyan-400/10 hover:scale-105 transition duration-300"
-            >
-              <h2 className="text-2xl font-bold mb-3 text-cyan-300">
-                {project.title}
-              </h2>
-
-              <p className="text-slate-300 leading-relaxed">
-                {project.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-20 bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-cyan-400/10 shadow-2xl">
-          <h2 className="text-4xl font-bold mb-6 text-cyan-300">Builder Mindset</h2>
-
-          <p className="text-slate-300 leading-relaxed text-lg">
-            I enjoy learning by building real things instead of only studying theory. I like experimenting with tools, solving infrastructure-related problems, and understanding how production systems work. Startups excite me because they provide opportunities to take ownership, move fast, and continuously improve through practical work.
-          </p>
-        </div>
-
-        <div className="mt-20 text-center pb-16">
-          <h2 className="text-4xl font-bold mb-4">Tech Stack</h2>
-
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            {[
-              "Linux",
-              "Networking",
-              "Git",
-              "DevOps",
-              "Cloud Basics",
-              "Datadog",
-              "HTML",
-              "CSS",
-              "JavaScript",
-            ].map((skill, index) => (
-              <div
-                key={index}
-                className="bg-cyan-400 text-black px-5 py-2 rounded-full font-semibold"
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to right,#020617,#0f172a,#164e63);
+color:white;
+padding:20px;
 }
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+color:#cbd5e1;
+}
+
+.badge{
+display:inline-block;
+padding:10px 20px;
+background:#083344;
+border-radius:30px;
+margin-bottom:20px;
+color:#67e8f9;
+font-weight:bold;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.card h2{
+color:#67e8f9;
+}
+
+.skills{
+margin-top:50px;
+text-align:center;
+}
+
+.skill{
+display:inline-block;
+background:#67e8f9;
+color:black;
+padding:10px 18px;
+border-radius:30px;
+margin:10px;
+font-weight:bold;
+}
+
+.footer{
+text-align:center;
+margin-top:60px;
+color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<div class="badge">
+Open To Work • DevOps • IT Operations
+</div>
+
+<h1>Yash Deshmukh</h1>
+
+<p>
+Aspiring DevOps & IT Operations Engineer passionate about Linux,
+Networking, Cloud Infrastructure and solving real-world problems.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h2>Linux Monitoring Dashboard</h2>
+<p>
+Built a monitoring dashboard inspired by DevOps observability tools.
+</p>
+</div>
+
+<div class="card">
+<h2>Server Health Tracker</h2>
+<p>
+Focused on uptime tracking, troubleshooting and IT operations workflows.
+</p>
+</div>
+
+<div class="card">
+<h2>Cloud & Networking Lab</h2>
+<p>
+Hands-on learning environment for Linux administration and networking.
+</p>
+</div>
+
+</div>
+
+<div class="skills">
+
+<h2>Tech Stack</h2>
+
+<div class="skill">Linux</div>
+<div class="skill">Networking</div>
+<div class="skill">GitHub</div>
+<div class="skill">DevOps</div>
+<div class="skill">Cloud</div>
+<div class="skill">Datadog</div>
+
+</div>
+
+<div class="footer">
+Built by Yash Deshmukh
+</div>
+
+</div>
+
+</body>
+</html>
