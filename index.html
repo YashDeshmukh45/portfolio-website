@@ -1,52 +1,98 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Yash Portfolio</title>
-<style>
-body{
-background:#0f172a;
-color:white;
-font-family:Arial;
-padding:20px;
+
+export default function PortfolioWebsite() {
+  const projects = [
+    {
+      title: "Linux Monitoring Dashboard",
+      desc: "Real-time style monitoring dashboard inspired by DevOps observability tools.",
+    },
+    {
+      title: "Server Health Tracker",
+      desc: "Practice project focused on uptime tracking, troubleshooting, and IT operations workflows.",
+    },
+    {
+      title: "Cloud & Networking Lab",
+      desc: "Hands-on learning environment for networking, Linux administration, and cloud basics.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-cyan-950 text-white p-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center py-20">
+          <div className="inline-block px-4 py-2 rounded-full bg-cyan-400/20 border border-cyan-400 text-cyan-300 mb-6 text-sm font-semibold">
+            Open To Work • DevOps • IT Operations
+          </div>
+
+          <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            Yash Deshmukh
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            I build practical infrastructure-focused projects while learning Linux,
+            networking, cloud systems, monitoring, and DevOps workflows.
+            Passionate about solving real-world technical problems and growing in fast-paced startup environments.
+          </p>
+
+          <div className="mt-10 flex justify-center gap-4 flex-wrap">
+            <button className="bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
+              Explore Projects
+            </button>
+
+            <button className="border border-slate-500 px-6 py-3 rounded-2xl hover:bg-slate-800 transition">
+              Hire Me
+            </button>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mt-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 shadow-2xl border border-cyan-400/10 hover:scale-105 transition duration-300"
+            >
+              <h2 className="text-2xl font-bold mb-3 text-cyan-300">
+                {project.title}
+              </h2>
+
+              <p className="text-slate-300 leading-relaxed">
+                {project.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-20 bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-cyan-400/10 shadow-2xl">
+          <h2 className="text-4xl font-bold mb-6 text-cyan-300">Builder Mindset</h2>
+
+          <p className="text-slate-300 leading-relaxed text-lg">
+            I enjoy learning by building real things instead of only studying theory. I like experimenting with tools, solving infrastructure-related problems, and understanding how production systems work. Startups excite me because they provide opportunities to take ownership, move fast, and continuously improve through practical work.
+          </p>
+        </div>
+
+        <div className="mt-20 text-center pb-16">
+          <h2 className="text-4xl font-bold mb-4">Tech Stack</h2>
+
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            {[
+              "Linux",
+              "Networking",
+              "Git",
+              "DevOps",
+              "Cloud Basics",
+              "Datadog",
+              "HTML",
+              "CSS",
+              "JavaScript",
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="bg-cyan-400 text-black px-5 py-2 rounded-full font-semibold"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:15px;
-margin-top:20px;
-}
-</style>
-</head>
-
-<body>
-
-<h1>Yash Deshmukh</h1>
-<p>Aspiring DevOps & IT Operations Engineer</p>
-
-<div class="card">
-<h2>About Me</h2>
-<p>
-Passionate about Linux, Networking, DevOps and Cloud Infrastructure.
-Learning by building practical projects.
-</p>
-</div>
-
-<div class="card">
-<h2>Skills</h2>
-<ul>
-<li>Linux</li>
-<li>Networking</li>
-<li>GitHub</li>
-<li>Cloud Basics</li>
-<li>Datadog</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Projects</h2>
-<p>Linux Monitoring Dashboard</p>
-<p>Networking Practice Labs</p>
-</div>
-
-</body>
-</html>
